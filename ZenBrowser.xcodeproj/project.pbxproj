@@ -12,18 +12,7 @@
 		3EFC2E861B03348B007F3568 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EFC2E841B03348B007F3568 /* Main.storyboard */; };
 		3EFC2E881B03348B007F3568 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EFC2E871B03348B007F3568 /* Images.xcassets */; };
 		3EFC2E8B1B03348B007F3568 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EFC2E891B03348B007F3568 /* LaunchScreen.xib */; };
-		3EFC2E971B03348B007F3568 /* ZenBrowserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFC2E961B03348B007F3568 /* ZenBrowserTests.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		3EFC2E911B03348B007F3568 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3EFC2E731B03348B007F3568 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3EFC2E7A1B03348B007F3568;
-			remoteInfo = ZenBrowser;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3EFC2E7B1B03348B007F3568 /* ZenBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZenBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,20 +22,10 @@
 		3EFC2E851B03348B007F3568 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3EFC2E871B03348B007F3568 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3EFC2E8A1B03348B007F3568 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		3EFC2E901B03348B007F3568 /* ZenBrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZenBrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3EFC2E951B03348B007F3568 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3EFC2E961B03348B007F3568 /* ZenBrowserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZenBrowserTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3EFC2E781B03348B007F3568 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3EFC2E8D1B03348B007F3568 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -60,7 +39,6 @@
 			isa = PBXGroup;
 			children = (
 				3EFC2E7D1B03348B007F3568 /* ZenBrowser */,
-				3EFC2E931B03348B007F3568 /* ZenBrowserTests */,
 				3EFC2E7C1B03348B007F3568 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,7 +47,6 @@
 			isa = PBXGroup;
 			children = (
 				3EFC2E7B1B03348B007F3568 /* ZenBrowser.app */,
-				3EFC2E901B03348B007F3568 /* ZenBrowserTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,23 +72,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3EFC2E931B03348B007F3568 /* ZenBrowserTests */ = {
-			isa = PBXGroup;
-			children = (
-				3EFC2E961B03348B007F3568 /* ZenBrowserTests.swift */,
-				3EFC2E941B03348B007F3568 /* Supporting Files */,
-			);
-			path = ZenBrowserTests;
-			sourceTree = "<group>";
-		};
-		3EFC2E941B03348B007F3568 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				3EFC2E951B03348B007F3568 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,24 +92,6 @@
 			productReference = 3EFC2E7B1B03348B007F3568 /* ZenBrowser.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3EFC2E8F1B03348B007F3568 /* ZenBrowserTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3EFC2E9D1B03348B007F3568 /* Build configuration list for PBXNativeTarget "ZenBrowserTests" */;
-			buildPhases = (
-				3EFC2E8C1B03348B007F3568 /* Sources */,
-				3EFC2E8D1B03348B007F3568 /* Frameworks */,
-				3EFC2E8E1B03348B007F3568 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3EFC2E921B03348B007F3568 /* PBXTargetDependency */,
-			);
-			name = ZenBrowserTests;
-			productName = ZenBrowserTests;
-			productReference = 3EFC2E901B03348B007F3568 /* ZenBrowserTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -161,10 +103,7 @@
 				TargetAttributes = {
 					3EFC2E7A1B03348B007F3568 = {
 						CreatedOnToolsVersion = 6.3.1;
-					};
-					3EFC2E8F1B03348B007F3568 = {
-						CreatedOnToolsVersion = 6.3.1;
-						TestTargetID = 3EFC2E7A1B03348B007F3568;
+						DevelopmentTeam = 8S3FTRWYE7;
 					};
 				};
 			};
@@ -182,7 +121,6 @@
 			projectRoot = "";
 			targets = (
 				3EFC2E7A1B03348B007F3568 /* ZenBrowser */,
-				3EFC2E8F1B03348B007F3568 /* ZenBrowserTests */,
 			);
 		};
 /* End PBXProject section */
@@ -198,13 +136,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3EFC2E8E1B03348B007F3568 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -217,23 +148,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3EFC2E8C1B03348B007F3568 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3EFC2E971B03348B007F3568 /* ZenBrowserTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		3EFC2E921B03348B007F3568 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3EFC2E7A1B03348B007F3568 /* ZenBrowser */;
-			targetProxy = 3EFC2E911B03348B007F3568 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3EFC2E841B03348B007F3568 /* Main.storyboard */ = {
@@ -291,7 +206,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -330,7 +245,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -342,7 +257,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ZenBrowser/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -352,43 +270,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ZenBrowser/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		3EFC2E9E1B03348B007F3568 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = ZenBrowserTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZenBrowser.app/ZenBrowser";
-			};
-			name = Debug;
-		};
-		3EFC2E9F1B03348B007F3568 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = ZenBrowserTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZenBrowser.app/ZenBrowser";
 			};
 			name = Release;
 		};
@@ -409,14 +296,6 @@
 			buildConfigurations = (
 				3EFC2E9B1B03348B007F3568 /* Debug */,
 				3EFC2E9C1B03348B007F3568 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		3EFC2E9D1B03348B007F3568 /* Build configuration list for PBXNativeTarget "ZenBrowserTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3EFC2E9E1B03348B007F3568 /* Debug */,
-				3EFC2E9F1B03348B007F3568 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
