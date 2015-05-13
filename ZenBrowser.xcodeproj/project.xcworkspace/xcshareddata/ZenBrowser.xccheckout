@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>84A03E83-0F81-483F-AA8E-FAB4CFC4CEAC</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E97B9DD6338573B0A26A179518AB994518B0C54E</key>
+		<string>github.com:kublaios/ZenBrowser.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ZenBrowser.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E97B9DD6338573B0A26A179518AB994518B0C54E</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:kublaios/ZenBrowser.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E97B9DD6338573B0A26A179518AB994518B0C54E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E97B9DD6338573B0A26A179518AB994518B0C54E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ZenBrowser</string>
+		</dict>
+	</array>
+</dict>
+</plist>

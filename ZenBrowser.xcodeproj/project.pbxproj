@@ -11,7 +11,6 @@
 		3EFC2E831B03348B007F3568 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFC2E821B03348B007F3568 /* ViewController.swift */; };
 		3EFC2E861B03348B007F3568 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EFC2E841B03348B007F3568 /* Main.storyboard */; };
 		3EFC2E881B03348B007F3568 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EFC2E871B03348B007F3568 /* Images.xcassets */; };
-		3EFC2E8B1B03348B007F3568 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EFC2E891B03348B007F3568 /* LaunchScreen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,7 +20,6 @@
 		3EFC2E821B03348B007F3568 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3EFC2E851B03348B007F3568 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3EFC2E871B03348B007F3568 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		3EFC2E8A1B03348B007F3568 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +56,6 @@
 				3EFC2E821B03348B007F3568 /* ViewController.swift */,
 				3EFC2E841B03348B007F3568 /* Main.storyboard */,
 				3EFC2E871B03348B007F3568 /* Images.xcassets */,
-				3EFC2E891B03348B007F3568 /* LaunchScreen.xib */,
 				3EFC2E7E1B03348B007F3568 /* Supporting Files */,
 			);
 			path = ZenBrowser;
@@ -131,7 +128,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EFC2E861B03348B007F3568 /* Main.storyboard in Resources */,
-				3EFC2E8B1B03348B007F3568 /* LaunchScreen.xib in Resources */,
 				3EFC2E881B03348B007F3568 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -157,14 +153,6 @@
 				3EFC2E851B03348B007F3568 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		3EFC2E891B03348B007F3568 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3EFC2E8A1B03348B007F3568 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
