@@ -1,1 +1,16 @@
+PODS:
+  - CAAnimationBlocks (0.0.1)
+  - ChatHeads (1.0):
+    - CAAnimationBlocks
+    - SKBounceAnimation
+  - SKBounceAnimation (1.0.04)
+
+DEPENDENCIES:
+  - ChatHeads (~> 1.0)
+
+SPEC CHECKSUMS:
+  CAAnimationBlocks: 1aaca5fb6447a95d83b20cc786992956ef46e4ee
+  ChatHeads: 2cc05483f296a5de871643a5962ebf373f79b0e7
+  SKBounceAnimation: c1be441b78e1a38c44609d6e38ae20ad79ecc180
+
 COCOAPODS: 0.35.0

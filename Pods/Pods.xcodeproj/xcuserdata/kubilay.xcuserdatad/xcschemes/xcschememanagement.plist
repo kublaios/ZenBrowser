@@ -3,8 +3,50 @@
 <plist version="1.0">
 <dict>
 	<key>SchemeUserState</key>
-	<dict/>
+	<dict>
+		<key>Pods-CAAnimationBlocks.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-ChatHeads.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-SKBounceAnimation.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict/>
+	<dict>
+		<key>8F53B1ADC5E8ED9B090EC6E1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B9C839177915092B970E54AF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CAA22E616A330449062F1426</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D41DB884546690DFEDC78B11</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
 </dict>
 </plist>

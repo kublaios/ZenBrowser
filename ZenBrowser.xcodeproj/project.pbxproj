@@ -7,19 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E554ADD1B04BE98004F4C40 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E554ADC1B04BE98004F4C40 /* MenuViewController.swift */; };
 		3EFC2E811B03348B007F3568 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFC2E801B03348B007F3568 /* AppDelegate.swift */; };
 		3EFC2E831B03348B007F3568 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFC2E821B03348B007F3568 /* ViewController.swift */; };
 		3EFC2E861B03348B007F3568 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EFC2E841B03348B007F3568 /* Main.storyboard */; };
 		3EFC2E881B03348B007F3568 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EFC2E871B03348B007F3568 /* Images.xcassets */; };
+		3EFC2EA41B039B21007F3568 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EFC2EA31B039B21007F3568 /* menu.png */; };
+		FDB934C4A56B141AA37A5FB5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA546C4509B9372F79BD53F8 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E554ADC1B04BE98004F4C40 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		3EFC2E7B1B03348B007F3568 /* ZenBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZenBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EFC2E7F1B03348B007F3568 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3EFC2E801B03348B007F3568 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EFC2E821B03348B007F3568 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3EFC2E851B03348B007F3568 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3EFC2E871B03348B007F3568 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3EFC2EA01B038532007F3568 /* ZenBrowser-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZenBrowser-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		3EFC2EA31B039B21007F3568 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		55204699EFE39D2EF84FA992 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		8402C554424279EE656DC0F1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		FA546C4509B9372F79BD53F8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDB934C4A56B141AA37A5FB5 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +48,8 @@
 			children = (
 				3EFC2E7D1B03348B007F3568 /* ZenBrowser */,
 				3EFC2E7C1B03348B007F3568 /* Products */,
+				9D007DEB0DF0EA45CA5E8A4B /* Pods */,
+				5CE5C86FF6A694989469DBC2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +66,7 @@
 			children = (
 				3EFC2E801B03348B007F3568 /* AppDelegate.swift */,
 				3EFC2E821B03348B007F3568 /* ViewController.swift */,
+				3E554ADC1B04BE98004F4C40 /* MenuViewController.swift */,
 				3EFC2E841B03348B007F3568 /* Main.storyboard */,
 				3EFC2E871B03348B007F3568 /* Images.xcassets */,
 				3EFC2E7E1B03348B007F3568 /* Supporting Files */,
@@ -64,9 +77,28 @@
 		3EFC2E7E1B03348B007F3568 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3EFC2EA31B039B21007F3568 /* menu.png */,
+				3EFC2EA01B038532007F3568 /* ZenBrowser-Bridging-Header.h */,
 				3EFC2E7F1B03348B007F3568 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5CE5C86FF6A694989469DBC2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA546C4509B9372F79BD53F8 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9D007DEB0DF0EA45CA5E8A4B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8402C554424279EE656DC0F1 /* Pods.debug.xcconfig */,
+				55204699EFE39D2EF84FA992 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -76,9 +108,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3EFC2E9A1B03348B007F3568 /* Build configuration list for PBXNativeTarget "ZenBrowser" */;
 			buildPhases = (
+				AAEE815C09B4C5A4B6FE17EC /* Check Pods Manifest.lock */,
 				3EFC2E771B03348B007F3568 /* Sources */,
 				3EFC2E781B03348B007F3568 /* Frameworks */,
 				3EFC2E791B03348B007F3568 /* Resources */,
+				C1B4560CA558D51359FA1CB8 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,10 +163,44 @@
 			files = (
 				3EFC2E861B03348B007F3568 /* Main.storyboard in Resources */,
 				3EFC2E881B03348B007F3568 /* Images.xcassets in Resources */,
+				3EFC2EA41B039B21007F3568 /* menu.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AAEE815C09B4C5A4B6FE17EC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C1B4560CA558D51359FA1CB8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3EFC2E771B03348B007F3568 /* Sources */ = {
@@ -140,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EFC2E831B03348B007F3568 /* ViewController.swift in Sources */,
+				3E554ADD1B04BE98004F4C40 /* MenuViewController.swift in Sources */,
 				3EFC2E811B03348B007F3568 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,27 +312,34 @@
 		};
 		3EFC2E9B1B03348B007F3568 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8402C554424279EE656DC0F1 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ZenBrowser/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ZenBrowser-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		3EFC2E9C1B03348B007F3568 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55204699EFE39D2EF84FA992 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ZenBrowser/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ZenBrowser-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -286,6 +362,7 @@
 				3EFC2E9C1B03348B007F3568 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

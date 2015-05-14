@@ -9,13 +9,31 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, CHDraggingCoordinatorDelegate {
 
     var window: UIWindow?
-
+    var draggingCoordinator: CHDraggingCoordinator?
+    var viewController: UIViewController?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.viewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("ViewController") as? UIViewController
+        
+        var navCtl = UINavigationController(rootViewController: self.viewController!)
+        self.window?.rootViewController = navCtl
+        self.window?.makeKeyAndVisible()
+        
+        var draggableView = CHDraggableView(image: UIImage(named: "menu")!)
+        draggableView.tag = 1
+        
+        self.draggingCoordinator = CHDraggingCoordinator(window: self.window!, draggableViewBounds: draggableView.bounds, closeView: nil)
+        self.draggingCoordinator?.delegate = self
+        self.draggingCoordinator?.snappingEdge = CHSnappingEdgeBoth
+        draggableView.delegate = self.draggingCoordinator!
+        
+        self.window?.addSubview(draggableView)
+        
         return true
     }
 
@@ -41,6 +59,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func draggingCoordinator(coordinator: CHDraggingCoordinator!, viewControllerForDraggableView draggableView: CHDraggableView!) -> UIViewController! {
+        return UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("MenuViewController") as! UIViewController
+    }
 
 }
 
