@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -18,24 +19,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="luL-uv-mTl">
-                                <rect key="frame" x="0.0" y="20" width="600" height="600"/>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="luL-uv-mTl">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="83A-4k-t9D"/>
+                                </connections>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="luL-uv-mTl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="BAk-px-eh3"/>
-                            <constraint firstItem="luL-uv-mTl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Dhc-85-LRQ"/>
-                            <constraint firstAttribute="width" secondItem="luL-uv-mTl" secondAttribute="width" id="Mol-Do-voR"/>
-                            <constraint firstItem="luL-uv-mTl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="So0-Vt-BeP"/>
-                            <constraint firstAttribute="height" secondItem="luL-uv-mTl" secondAttribute="height" id="jm8-tj-Dav"/>
+                            <constraint firstItem="luL-uv-mTl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="MG4-D0-OQo"/>
+                            <constraint firstItem="luL-uv-mTl" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="NYK-lr-lgr"/>
+                            <constraint firstItem="luL-uv-mTl" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="t1V-TU-BLx"/>
+                            <constraint firstItem="luL-uv-mTl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="zRR-Dy-vbh"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="So0-Vt-BeP"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="browser" destination="luL-uv-mTl" id="1Qp-L9-Gm3"/>
@@ -55,8 +53,118 @@
                     <view key="view" contentMode="scaleToFill" id="Onv-UI-O9M">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.97647058819999999" green="0.43529411759999997" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xuW-Ka-nra">
+                                <rect key="frame" x="16" y="0.0" width="568" height="200"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zbp-Ac-PGr">
+                                <rect key="frame" x="16" y="200" width="568" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="0.90000000000000002" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Zbp-Ac-PGr" secondAttribute="height" multiplier="71:10" id="o9U-Mx-sbv"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter URL or search term" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EDL-zQ-h6I">
+                                <rect key="frame" x="32" y="200" width="536" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="webSearch" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Ax9-bL-Nr9" id="nOJ-8v-969"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lml-B1-PIG">
+                                <rect key="frame" x="16" y="120" width="142" height="80"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                <state key="normal" title="back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnBackTapped:" destination="Ax9-bL-Nr9" eventType="touchUpInside" id="4K4-bl-jSX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QzI-3D-H4s">
+                                <rect key="frame" x="158" y="120" width="142" height="80"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                <state key="normal" title="forward">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnForwardTapped:" destination="Ax9-bL-Nr9" eventType="touchUpInside" id="b6B-JM-N0O"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ph1-8P-8Up">
+                                <rect key="frame" x="299" y="120" width="142" height="80"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                <state key="normal" title="refresh">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnRefreshTapped:" destination="Ax9-bL-Nr9" eventType="touchUpInside" id="Zq8-gh-Alf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="soM-DB-mc8">
+                                <rect key="frame" x="441" y="120" width="142" height="80"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                                <state key="normal" title="google">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnGoogleTapped:" destination="Ax9-bL-Nr9" eventType="touchUpInside" id="c34-fJ-Ju3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Zbp-Ac-PGr" firstAttribute="leading" secondItem="Onv-UI-O9M" secondAttribute="leadingMargin" id="069-pM-BDb"/>
+                            <constraint firstItem="Zbp-Ac-PGr" firstAttribute="top" secondItem="lml-B1-PIG" secondAttribute="bottom" id="2O4-nr-0M5"/>
+                            <constraint firstItem="EDL-zQ-h6I" firstAttribute="centerY" secondItem="Zbp-Ac-PGr" secondAttribute="centerY" id="40s-ha-AXS"/>
+                            <constraint firstItem="QzI-3D-H4s" firstAttribute="height" secondItem="lml-B1-PIG" secondAttribute="height" id="43a-el-z3I"/>
+                            <constraint firstItem="lml-B1-PIG" firstAttribute="height" secondItem="Zbp-Ac-PGr" secondAttribute="height" id="4bK-xr-B6U"/>
+                            <constraint firstItem="soM-DB-mc8" firstAttribute="centerY" secondItem="ph1-8P-8Up" secondAttribute="centerY" id="6Dz-9X-UFg"/>
+                            <constraint firstItem="lml-B1-PIG" firstAttribute="leading" secondItem="Zbp-Ac-PGr" secondAttribute="leading" id="72V-R1-mPg"/>
+                            <constraint firstItem="EDL-zQ-h6I" firstAttribute="centerX" secondItem="Zbp-Ac-PGr" secondAttribute="centerX" id="7ru-Dj-Pgt"/>
+                            <constraint firstItem="xuW-Ka-nra" firstAttribute="top" secondItem="hbf-Gi-YAZ" secondAttribute="bottom" constant="-20" id="9ar-Qq-i0P"/>
+                            <constraint firstItem="Zbp-Ac-PGr" firstAttribute="width" secondItem="xuW-Ka-nra" secondAttribute="width" id="DeG-PK-OaI"/>
+                            <constraint firstItem="QzI-3D-H4s" firstAttribute="centerY" secondItem="lml-B1-PIG" secondAttribute="centerY" id="FF2-hX-D49"/>
+                            <constraint firstItem="Zbp-Ac-PGr" firstAttribute="centerX" secondItem="xuW-Ka-nra" secondAttribute="centerX" id="Iam-Zb-Zqc"/>
+                            <constraint firstItem="Zbp-Ac-PGr" firstAttribute="trailing" secondItem="Onv-UI-O9M" secondAttribute="trailingMargin" id="Man-BV-JgS"/>
+                            <constraint firstItem="QzI-3D-H4s" firstAttribute="leading" secondItem="lml-B1-PIG" secondAttribute="trailing" id="NB9-5F-jFI"/>
+                            <constraint firstItem="ph1-8P-8Up" firstAttribute="leading" secondItem="soM-DB-mc8" secondAttribute="trailing" id="QJd-eF-hde"/>
+                            <constraint firstItem="lml-B1-PIG" firstAttribute="height" secondItem="ph1-8P-8Up" secondAttribute="height" id="TEY-Uw-9Fx"/>
+                            <constraint firstItem="ph1-8P-8Up" firstAttribute="leading" secondItem="QzI-3D-H4s" secondAttribute="trailing" constant="-1" id="ZEd-z8-33W"/>
+                            <constraint firstItem="EDL-zQ-h6I" firstAttribute="width" secondItem="Zbp-Ac-PGr" secondAttribute="height" multiplier="67:10" id="bFv-ec-Sfw"/>
+                            <constraint firstItem="lml-B1-PIG" firstAttribute="centerY" secondItem="ph1-8P-8Up" secondAttribute="centerY" id="evB-FB-Au3"/>
+                            <constraint firstItem="lml-B1-PIG" firstAttribute="width" secondItem="ph1-8P-8Up" secondAttribute="width" id="i9w-Nw-KYJ"/>
+                            <constraint firstItem="Zbp-Ac-PGr" firstAttribute="top" secondItem="xuW-Ka-nra" secondAttribute="bottom" id="nXf-yk-OAd"/>
+                            <constraint firstItem="ph1-8P-8Up" firstAttribute="leading" secondItem="soM-DB-mc8" secondAttribute="trailing" id="noa-dT-SBX"/>
+                            <constraint firstItem="EDL-zQ-h6I" firstAttribute="height" secondItem="Zbp-Ac-PGr" secondAttribute="height" id="oaj-aB-AY1"/>
+                            <constraint firstAttribute="centerX" secondItem="Zbp-Ac-PGr" secondAttribute="centerX" id="pVo-al-cbW"/>
+                            <constraint firstItem="soM-DB-mc8" firstAttribute="height" secondItem="ph1-8P-8Up" secondAttribute="height" id="pgu-BY-zsc"/>
+                            <constraint firstItem="soM-DB-mc8" firstAttribute="width" secondItem="ph1-8P-8Up" secondAttribute="width" id="qCP-g4-6Ga"/>
+                            <constraint firstAttribute="width" secondItem="xuW-Ka-nra" secondAttribute="height" multiplier="3:1" id="rQC-lg-w22"/>
+                            <constraint firstItem="QzI-3D-H4s" firstAttribute="width" secondItem="lml-B1-PIG" secondAttribute="width" id="vpy-Ax-Xki"/>
+                            <constraint firstItem="lml-B1-PIG" firstAttribute="width" secondItem="Zbp-Ac-PGr" secondAttribute="height" multiplier="71:40" id="ws3-R8-6Ow"/>
+                            <constraint firstItem="soM-DB-mc8" firstAttribute="leading" secondItem="ph1-8P-8Up" secondAttribute="trailing" id="xq2-81-aTY"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="QJd-eF-hde"/>
+                                <exclude reference="noa-dT-SBX"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="btnBack" destination="lml-B1-PIG" id="Qxz-UW-c2i"/>
+                        <outlet property="btnForward" destination="QzI-3D-H4s" id="eYk-Sb-XU8"/>
+                        <outlet property="btnGoogle" destination="soM-DB-mc8" id="CCx-e5-Gpz"/>
+                        <outlet property="btnRefresh" destination="ph1-8P-8Up" id="DCQ-l1-Gpf"/>
+                        <outlet property="txt" destination="EDL-zQ-h6I" id="i4b-TI-h8Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zxq-LM-ju9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

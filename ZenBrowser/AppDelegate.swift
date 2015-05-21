@@ -12,27 +12,44 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate, CHDraggingCoordinatorDelegate {
 
     var window: UIWindow?
+    var draggableView: CHDraggableView?
     var draggingCoordinator: CHDraggingCoordinator?
     var viewController: UIViewController?
+    var activity: UIActivityIndicatorView?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        // target window & view controller
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.viewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("ViewController") as? UIViewController
         
+        // start with a navigation controller
         var navCtl = UINavigationController(rootViewController: self.viewController!)
         self.window?.rootViewController = navCtl
         self.window?.makeKeyAndVisible()
         
-        var draggableView = CHDraggableView(image: UIImage(named: "menu")!)
-        draggableView.tag = 1
+        // initialize the draggable view
+        self.draggableView = CHDraggableView(image: UIImage(named: "menu")!)
+        self.draggableView?.tag = 1
         
-        self.draggingCoordinator = CHDraggingCoordinator(window: self.window!, draggableViewBounds: draggableView.bounds, closeView: nil)
+        // initialize a dragging coordinator for the draggable view
+        self.draggingCoordinator = CHDraggingCoordinator(window: self.window!, draggableViewBounds: self.draggableView!.bounds, closeView: nil)
         self.draggingCoordinator?.delegate = self
         self.draggingCoordinator?.snappingEdge = CHSnappingEdgeBoth
-        draggableView.delegate = self.draggingCoordinator!
+        self.draggableView?.delegate = self.draggingCoordinator!
         
-        self.window?.addSubview(draggableView)
+        // activity indicator
+        self.activity = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
+        self.activity?.hidesWhenStopped = true
+        self.activity?.stopAnimating()
+        var frame = self.activity!.frame
+        var x = self.draggableView!.frame.origin.x + (self.draggableView!.frame.size.width / 2) - 10.0 // 10 represents half of the width of the activity indicator
+        var y = self.draggableView!.frame.origin.y + (self.draggableView!.frame.size.height / 2) - 10.0
+        frame.origin = CGPointMake(x, y)
+        self.activity?.frame = frame
+        self.draggableView?.addSubview(self.activity!)
+        
+        self.window?.addSubview(self.draggableView!)
         
         return true
     }
@@ -49,6 +66,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CHDraggingCoordinatorDele
 
     func applicationWillEnterForeground(application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+        // TODO: Discourage draggable view from disappearing
+        // MARK: Bugfix when draggable view disappears (happens if dragged over status bar)
+        self.draggableView?.removeFromSuperview()
+        if let draggable = self.draggableView {
+            self.window?.addSubview(draggable)
+        }
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
