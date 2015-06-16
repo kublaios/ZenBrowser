@@ -52,6 +52,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
         }
         // latest checks for the URL
         url = url.stringByReplacingOccurrencesOfString(" ", withString: "", options: nil, range: nil)
+        url = url.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
         if let candidateURL = NSURL(string: url) {
             if candidateURL.scheme != nil && candidateURL.host != nil {
                 self.browser.loadRequest(NSURLRequest(URL: NSURL(string: url)!))
